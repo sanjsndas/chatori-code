@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – ChatoriCode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #E53935;
+            --accent-yellow: #FFCA28;
+            --charcoal: #333333;
+            --light-gray: #f8f8f8;
+            --text-color: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.8; /* Slightly more space for readability in long text */
+            color: var(--text-color);
+            background-color: var(--light-gray);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--charcoal);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.8em; }
+        h3 { font-size: 2.2em; }
+        h4 { font-size: 1.8em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 25px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        /* --- Main Content - Privacy Policy --- */
+        .privacy-hero {
+            background-color: var(--accent-yellow);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-red);
+            margin-bottom: 40px;
+        }
+
+        .privacy-hero h1 {
+            color: var(--primary-red);
+            font-size: 4em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .privacy-hero p {
+            font-size: 1.3em;
+            color: var(--charcoal);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-content {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .privacy-content h2 {
+            color: var(--primary-red);
+            font-size: 2.5em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-yellow);
+            padding-bottom: 10px;
+        }
+
+        .privacy-content h3 {
+            color: var(--charcoal);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content p {
+            margin-bottom: 1.5em;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .privacy-content ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+        }
+
+        .privacy-content ol {
+            list-style: decimal;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+        }
+
+        .privacy-content li {
+            margin-bottom: 0.8em;
+            font-size: 1.05em;
+        }
+
+        .privacy-content a {
+            color: var(--primary-red);
+            text-decoration: underline;
+        }
+
+        .privacy-content a:hover {
+            color: var(--charcoal);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 40px 0 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .footer-info {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .disclaimer-text {
+            font-size: 0.8em;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            text-align: left;
+        }
+        
+        .customer-satisfaction {
+            margin-top: 20px;
+            color: var(--accent-yellow);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header nav ul li {
+                margin: 5px 15px;
+            }
+
+            .privacy-hero h1 {
+                font-size: 3em;
+            }
+
+            .privacy-hero p {
+                font-size: 1.1em;
+            }
+
+            .privacy-content {
+                padding: 30px;
+            }
+
+            .privacy-content h2 {
+                font-size: 2em;
+            }
+
+            .privacy-content h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.7em; }
+            .privacy-hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ChatoriCode</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="privacy-hero">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>Your privacy is paramount to us. This policy details how ChatoriCode collects, uses, and protects your personal information.</p>
+            </div>
+        </section>
+
+        <section class="privacy-content container">
+            <p><strong>Last Updated: July 10, 2025</strong></p>
+
+            <h2>1. Introduction</h2>
+            <p>Welcome to ChatoriCode ("we," "our," or "us"). We are committed to protecting your privacy and personal data. This Privacy Policy outlines the types of information we collect from you when you visit and use our website, ChatoriCode.com (the "Website"), how we use that information, with whom we share it, and the choices you have regarding our use of your information. We also describe the measures we take to protect the security of your information and how you can contact us about our privacy practices. By accessing or using our Website, you agree to the terms of this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not use our Website. We encourage you to read this Privacy Policy carefully to understand our practices regarding your information and how we will treat it. This policy may change from time to time (see "Changes to Our Privacy Policy"). Your continued use of the Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates. This Privacy Policy is designed to be as transparent as possible, providing you with a clear understanding of your rights and our obligations concerning your personal data. We aim to balance our legitimate business interests with your reasonable expectations of privacy. Our commitment extends to ensuring that any data collected is processed lawfully, fairly, and in a transparent manner in relation to the data subject. We adhere to principles of data minimization, ensuring that we only collect data that is adequate, relevant, and limited to what is necessary for the purposes for which it is processed. Furthermore, we are dedicated to maintaining the accuracy of your data and, where necessary, keeping it up to date. We will store personal data for no longer than is necessary for the purposes for which the personal data are processed. We will also process personal data in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction, or damage, using appropriate technical or organizational measures. Our accountability principle means that we are responsible for, and must be able to demonstrate compliance with, the aforementioned principles.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p>We collect several types of information from and about users of our Website, including information:</p>
+            <ul>
+                <li><strong>Personal Information:</strong> This refers to information that can be used to identify you directly or indirectly. This may include your name, email address, postal address, telephone number, and any other information you voluntarily provide to us when you register for an account, subscribe to our newsletter, submit a recipe, participate in a contest or survey, or contact us. For example, if you create an account, we collect your username, password, and email address. If you sign up for our newsletter, we collect your email address. If you submit a recipe, we may collect your name, email, and any biographical information you choose to provide.</li>
+                <li><strong>Usage Data:</strong> As you navigate through and interact with our Website, we may automatically collect certain information about your equipment, browsing actions, and patterns. This includes details of your visits to our Website, including traffic data, location data, logs, and other communication data and the resources that you access and use on the Website. It also includes information about your computer and internet connection, including your IP address, operating system, browser type, referring URLs, pages viewed, and the dates/times of your visits. This data helps us understand how users interact with our Website, allowing us to improve its functionality and user experience. This information is primarily used for analytical purposes, to track trends, administer the site, track users' movements around the site, and gather demographic information about our user base as a whole.</li>
+                <li><strong>Device Information:</strong> We may collect information about the device you use to access our Website, such as the hardware model, operating system version, unique device identifiers, and mobile network information. This helps us optimize our Website for various devices and troubleshoot any compatibility issues.</li>
+                <li><strong>Location Information:</strong> With your consent, we may collect information about your actual location, such as IP addresses or GPS data. This information can be used to provide localized content, such as suggesting nearby food events or regional recipe variations. You can usually control location services through your device settings.</li>
+                <li><strong>Information from Third-Party Sources:</strong> We may receive information about you from third-party sources, such as social media platforms if you interact with our content on those platforms or choose to link your social media account to your ChatoriCode account. This information is governed by the privacy policies of those third-party services. We may also use third-party analytics services that collect data on our behalf, subject to their own privacy policies.</li>
+                <li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies (like web beacons and pixels) to track the activity on our Website and hold certain information. Cookies are small data files stored on your device that help us improve your experience, analyze site usage, and deliver relevant content. For more detailed information about how we use cookies, please refer to our dedicated <a href="cookies.html">Cookie Policy</a>. These technologies allow us to remember your preferences, keep you logged in, and understand which parts of our Website are most popular.</li>
+            </ul>
+            <p>We collect this information:</p>
+            <ul>
+                <li>Directly from you when you provide it to us.</li>
+                <li>Automatically as you navigate through the site. Information collected automatically may include usage details, IP addresses, and information collected through cookies, web beacons, and other tracking technologies.</li>
+                <li>From third parties, for example, our business partners.</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use information that we collect about you or that you provide to us, including any personal information, for the following purposes:</p>
+            <ul>
+                <li><strong>To Provide and Maintain Our Website:</strong> This includes operating, maintaining, and improving the functionality of ChatoriCode, ensuring a smooth and efficient user experience. We use your data to deliver the content you request, such as recipes, articles, and features.</li>
+                <li><strong>To Personalize Your Experience:</strong> We use your information to tailor the content and features you see on our Website, offering personalized recipe recommendations, articles, and advertisements that align with your interests and preferences. For example, if you frequently view spicy recipes, we might recommend more similar content.</li>
+                <li><strong>To Process Your Requests and Submissions:</strong> When you submit a recipe, participate in a contest, or ask a question, we use your information to process your submission, communicate with you regarding it, and, if applicable, publish your content on the Website.</li>
+                <li><strong>To Send You Marketing and Promotional Communications:</strong> With your consent, we may use your contact information to send you newsletters, updates, special offers, and other promotional materials related to ChatoriCode or our partners. You can opt-out of these communications at any time.</li>
+                <li><strong>For Analytics and Research:</strong> We use aggregated and anonymized data to understand user behavior, analyze trends, measure the effectiveness of our content, and identify areas for improvement. This helps us make informed decisions about Website development and content strategy.</li>
+                <li><strong>To Improve Our Website and Services:</strong> By analyzing usage patterns and feedback, we continuously work to enhance the functionality, design, and content of ChatoriCode, making it more user-friendly and valuable.</li>
+                <li><strong>For Security and Fraud Prevention:</strong> We use your information to detect, prevent, and address technical issues, security incidents, and fraudulent activities, protecting both our users and our Website. This includes monitoring for suspicious activity and enforcing our terms of service.</li>
+                <li><strong>To Comply with Legal Obligations:</strong> We may use your information to comply with applicable laws, regulations, legal processes, or governmental requests, such as responding to subpoenas or court orders.</li>
+                <li><strong>To Enforce Our Terms and Conditions:</strong> We use your information to enforce our Website's Terms of Service, including investigating potential violations and protecting our rights, privacy, safety, or property, and that of our users or the public.</li>
+                <li><strong>For Customer Support:</strong> We use your information to respond to your inquiries, provide technical support, and address any issues you may encounter while using our Website.</li>
+                <li><strong>For Advertising and Marketing:</strong> We may use your information to display advertisements that are more relevant to your interests. This can involve working with third-party advertising partners who use cookies and other tracking technologies to deliver targeted ads.</li>
+                <li><strong>To Administer Contests, Promotions, and Surveys:</strong> If you participate in any contests, promotions, or surveys, we use your information to administer these activities, including notifying winners and distributing prizes.</li>
+                <li><strong>To Develop New Features and Services:</strong> Insights from user data help us identify opportunities to develop new recipes, features, or sections on the Website that cater to our audience's evolving tastes and needs.</li>
+                <li><strong>For Internal Business Operations:</strong> This includes activities such as data analysis, auditing, and internal reporting to manage our business effectively.</li>
+                <li><strong>To Communicate with You:</strong> We may use your information to send you important notices, such as updates to our terms, conditions, and policies, or information about changes to our services.</li>
+            </ul>
+            <p>The legal basis for processing your personal data depends on the specific context in which we collect it. We will collect personal information from you only where we have your consent to do so, where we need the personal information to perform a contract with you (e.g., to provide a service you requested), or where the processing is in our legitimate interests and not overridden by your data protection interests or fundamental rights and freedoms.</p>
+
+            <h2>4. Disclosure of Your Information</h2>
+            <p>We may disclose aggregated information about our users, and information that does not identify any individual, without restriction. We may disclose personal information that we collect or you provide as described in this privacy policy:</p>
+            <ul>
+                <li><strong>To Our Affiliates:</strong> We may share your information with our parent company, subsidiaries, and affiliates for business and operational purposes, ensuring consistency across our services.</li>
+                <li><strong>To Contractors, Service Providers, and Other Third Parties:</strong> We may share your information with third-party vendors, consultants, and other service providers who perform services on our behalf, such as website hosting, data analysis, payment processing, information technology and infrastructure provision, customer service, email delivery, auditing, and other similar services. These third parties are obligated to keep your personal information confidential and use it only for the purposes for which we disclose it to them.</li>
+                <li><strong>For Legal Reasons:</strong> We may disclose your information if required to do so by law or in the good faith belief that such action is necessary to (i) comply with a legal obligation, (ii) protect and defend the rights or property of ChatoriCode, (iii) act in urgent circumstances to protect the personal safety of users of the Website or the public, or (iv) protect against legal liability. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.</li>
+                <li><strong>In Case of Business Transfer:</strong> In the event of a merger, acquisition, reorganization, bankruptcy, or other sale of all or a portion of our assets, your information may be transferred to the acquiring entity. We will notify you via email and/or a prominent notice on our Website of any change in ownership or uses of your personal information, as well as any choices you may have regarding your personal information.</li>
+                <li><strong>With Your Consent:</strong> We may disclose your personal information for any other purpose with your explicit consent. For example, if you agree to participate in a sponsored recipe challenge, we might share your contact information with the sponsoring brand.</li>
+                <li><strong>For Advertising and Analytics:</strong> We may share certain data with advertising partners and analytics providers (e.g., Google Analytics, advertising networks) to help us understand how users interact with our Website and to deliver more relevant advertisements. This data is typically aggregated or anonymized where possible.</li>
+                <li><strong>To Enforce Our Rights:</strong> We may disclose your information to enforce or apply our Terms of Service and other agreements, including for billing and collection purposes.</li>
+                <li><strong>To Publicly Display Information:</strong> If you submit content to public areas of our Website (e.g., comments on blog posts, recipe submissions that are published), any information you include in such content may be publicly available to other users of the Website and the general public. Please exercise caution when deciding what information to disclose in these public areas.</li>
+            </ul>
+            <p>We do not sell, rent, or trade your personal information to third parties for their direct marketing purposes without your explicit consent.</p>
+
+            <h2>5. Cookies and Other Tracking Technologies</h2>
+            <p>ChatoriCode uses cookies and similar tracking technologies to enhance your experience, analyze site usage, and deliver relevant content and advertisements. A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting, you may be unable to access certain parts of our Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Website.</p>
+            <h3>5.1. Types of Cookies We Use:</h3>
+            <ul>
+                <li><strong>Strictly Necessary Cookies:</strong> These cookies are essential for the operation of our Website. They enable you to navigate the site and use its features, such as accessing secure areas or adding items to a shopping cart (if applicable). Without these cookies, services you have asked for cannot be provided.</li>
+                <li><strong>Analytical/Performance Cookies:</strong> These cookies allow us to recognize and count the number of visitors and to see how visitors move around our Website when they are using it. This helps us to improve the way our Website works, for example, by ensuring that users are finding what they are looking for easily. We use tools like Google Analytics for this purpose, which collect anonymized data about your interactions.</li>
+                <li><strong>Functionality Cookies:</strong> These are used to recognize you when you return to our Website. This enables us to personalize our content for you, greet you by name, and remember your preferences (for example, your choice of language or region).</li>
+                <li><strong>Targeting/Advertising Cookies:</strong> These cookies record your visit to our Website, the pages you have visited, and the links you have followed. We will use this information to make our Website and the advertising displayed on it more relevant to your interests. We may also share this information with third parties for this purpose.</li>
+            </ul>
+            <h3>5.2. Third-Party Use of Cookies and Other Tracking Technologies:</h3>
+            <p>Some content or applications on the Website are served by third parties, including advertisers, ad networks and servers, content providers, and application providers. These third parties may use cookies alone or in conjunction with web beacons or other tracking technologies to collect information about you when you use our Website. The information they collect may be associated with your personal information or they may collect information, including personal information, about your online activities over time and across different websites and other online services. They may use this information to provide you with interest-based (behavioral) advertising or other targeted content.</p>
+            <p>We do not control these third parties' tracking technologies or how they may be used. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly. For information about how you can opt out of receiving targeted advertising from many providers, see "Choices About How We Use and Disclose Your Information."</p>
+            <p>For more detailed information about the specific cookies we use and your choices regarding cookies, please refer to our dedicated <a href="cookies.html">Cookie Policy</a>.</p>
+
+            <h2>6. Data Security</h2>
+            <p>The security of your personal information is very important to us. We have implemented reasonable administrative, technical, and physical measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. These measures include, but are not limited to:</p>
+            <ul>
+                <li><strong>Encryption:</strong> We use Secure Socket Layer (SSL) technology to encrypt data transmitted between your browser and our servers, particularly for sensitive information like login credentials.</li>
+                <li><strong>Access Controls:</strong> Access to your personal information is restricted to authorized employees, contractors, and agents who need to know that information in order to operate, develop, or improve our services. All such individuals are subject to strict contractual confidentiality obligations and may be disciplined or terminated if they fail to meet these obligations.</li>
+                <li><strong>Regular Security Audits:</strong> We regularly review our information collection, storage, and processing practices, including physical security measures, to guard against unauthorized access to systems.</li>
+                <li><strong>Data Minimization:</strong> We strive to collect only the personal information that is necessary for the purposes for which it is processed, reducing the risk associated with data breaches.</li>
+                <li><strong>Anonymization and Pseudonymization:</strong> Where feasible, we anonymize or pseudonymize data to protect your identity while still allowing us to perform analytics and improve our services.</li>
+                <li><strong>Employee Training:</strong> Our employees receive regular training on data protection best practices and security awareness.</li>
+                <li><strong>Incident Response Plan:</strong> We have a robust incident response plan in place to address any potential data breaches quickly and effectively, minimizing harm and ensuring compliance with notification requirements.</li>
+                <li><strong>Third-Party Security:</strong> We require our third-party service providers to implement and maintain appropriate security measures to protect the personal information they process on our behalf.</li>
+            </ul>
+            <p>Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our Website. Any transmission of personal information is at your own risk. We are not responsible for circumvention of any privacy settings or security measures contained on the Website.</p>
+
+            <h2>7. Data Retention</h2>
+            <p>We retain personal information for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure of your personal data, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal requirements.</p>
+            <p>For example, if you have an account with us, we will retain your account information for as long as your account is active or as needed to provide you services. If you opt-in to receive marketing communications, we will retain your email address until you unsubscribe. Usage data is generally retained for a shorter period, unless it is used to strengthen the security or to improve the functionality of our service, or we are legally obligated to retain this data for longer time periods.</p>
+            <p>In some circumstances, we may anonymize your personal information (so that it can no longer be associated with you) for research or statistical purposes, in which case we may use this information indefinitely without further notice to you.</p>
+
+            <h2>8. Your Data Protection Rights</h2>
+            <p>Depending on your location and applicable data protection laws, you may have certain rights regarding your personal information. These rights may include:</p>
+            <ul>
+                <li><strong>Right of Access:</strong> You have the right to request copies of your personal data. We may charge you a small fee for this service.</li>
+                <li><strong>Right to Rectification:</strong> You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</li>
+                <li><strong>Right to Erasure (Right to be Forgotten):</strong> You have the right to request that we erase your personal data, under certain conditions. This includes situations where the data is no longer necessary for the purposes for which it was collected, or where you withdraw consent and there is no other legal ground for processing.</li>
+                <li><strong>Right to Restrict Processing:</strong> You have the right to request that we restrict the processing of your personal data, under certain conditions. This may apply if you contest the accuracy of the data, if the processing is unlawful, or if we no longer need the data but you require it for legal claims.</li>
+                <li><strong>Right to Object to Processing:</strong> You have the right to object to our processing of your personal data, under certain conditions, particularly where the processing is based on our legitimate interests or for direct marketing purposes.</li>
+                <li><strong>Right to Data Portability:</strong> You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions, in a structured, commonly used, and machine-readable format.</li>
+                <li><strong>Right to Withdraw Consent:</strong> If we are relying on your consent to process your personal information, you have the right to withdraw your consent at any time. This will not affect the lawfulness of any processing carried out before you withdraw your consent.</li>
+                <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with a supervisory authority if you believe your data protection rights have been violated.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the contact details provided at the end of this Privacy Policy. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.</p>
+
+            <h2>9. Children's Privacy</h2>
+            <p>Our Website is not intended for children under 13 years of age. No one under age 13 may provide any personal information to or on the Website. We do not knowingly collect personal information from children under 13. If you are under 13, do not use or provide any information on this Website or through any of its features, register on the Website, make any purchases through the Website, use any of the interactive or public comment features of this Website, or provide any information about yourself to us, including your name, address, telephone number, email address, or any screen name or username you may use.</p>
+            <p>If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us at the email address provided in the "Contact Information" section.</p>
+            <p>We strongly recommend that parents and guardians monitor their children's online activities and use parental control tools to help provide a child-friendly online environment. Our commitment to children's privacy extends to ensuring that any content on our Website is appropriate for a general audience and does not target or exploit children. We encourage parents to discuss online safety with their children and to teach them about responsible sharing of personal information. If you are a parent or guardian and you become aware that your child has provided us with personal information without your consent, please contact us immediately. We will take all reasonable steps to remove such information from our records and terminate the child's account.</p>
+
+            <h2>10. International Data Transfers</h2>
+            <p>ChatoriCode is based in India. If you are accessing our Website from outside India, please be aware that your information may be transferred to, stored, and processed in India, where our servers are located and our central database is operated. Data protection laws in India may be different from those in your country of residence.</p>
+            <p>By using our Website, you understand and consent to the transfer of your information to our facilities in India and those third parties with whom we share it as described in this Privacy Policy. When we transfer personal data outside of your jurisdiction, we will take appropriate safeguards to ensure that your personal data remains protected in accordance with this Privacy Policy and applicable laws. These safeguards may include, but are not limited to, implementing standard contractual clauses approved by relevant authorities, relying on the recipient's Privacy Shield certification (for transfers to the U.S. from the EU, where applicable), or other legally recognized mechanisms for data transfer.</p>
+            <p>We are committed to ensuring that any international transfers of personal data are conducted in a manner that upholds your privacy rights and provides an adequate level of protection for your data, regardless of where it is processed. We continuously monitor legal developments concerning international data transfers to ensure our practices remain compliant.</p>
+
+            <h2>11. Links to Other Websites</h2>
+            <p>Our Website may contain links to other websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+            <p>These external sites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website. The presence of a link on our Website does not imply endorsement of the linked site or its content. We encourage you to be aware when you leave our Website and to read the privacy statements of each and every website that collects personally identifiable information.</p>
+
+            <h2>12. Changes to Our Privacy Policy</h2>
+            <p>It is our policy to post any changes we make to our Privacy Policy on this page. The date the Privacy Policy was last revised is identified at the top of the page. You are responsible for ensuring we have an up-to-date active and deliverable email address for you, and for periodically visiting our Website and this Privacy Policy to check for any changes. Your continued use of this Website after we make changes is deemed to be acceptance of those changes.</p>
+            <p>We may update our Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, and other factors. When we make material changes to this Privacy Policy, we will notify you by posting the updated policy on this page and, if the changes are significant, we may also provide more prominent notice (e.g., by email notification or a pop-up on our Website). We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting the personal information we collect. The revised Privacy Policy will take effect immediately upon posting, unless otherwise stated. If you do not agree with the updated Privacy Policy, your sole remedy is to discontinue using the Website.</p>
+
+            <h2>13. Your California Privacy Rights (CCPA/CPRA)</h2>
+            <p>If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), grants you specific rights regarding your personal information. This section describes your CCPA/CPRA rights and explains how to exercise those rights.</p>
+            <h3>13.1. Right to Know:</h3>
+            <p>You have the right to request that we disclose certain information to you about our collection and use of your personal information over the past 12 months. Once we receive and confirm your verifiable consumer request, we will disclose to you:</p>
+            <ul>
+                <li>The categories of personal information we collected about you.</li>
+                <li>The categories of sources for the personal information we collected about you.</li>
+                <li>Our business or commercial purpose for collecting or selling that personal information.</li>
+                <li>The categories of third parties with whom we share that personal information.</li>
+                <li>The specific pieces of personal information we collected about you (also called a data portability request).</li>
+                <li>If we sold or disclosed your personal information for a business purpose, two separate lists disclosing:
+                    <ul>
+                        <li>sales, identifying the personal information categories that each category of recipient purchased; and</li>
+                        <li>disclosures for a business purpose, identifying the personal information categories that each category of recipient obtained.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>13.2. Right to Delete:</h3>
+            <p>You have the right to request that we delete any of your personal information that we collected from you and retained, subject to certain exceptions. Once we receive and confirm your verifiable consumer request, we will delete (and direct our service providers to delete) your personal information from our records, unless an exception applies. We may deny your deletion request if retaining the information is necessary for us or our service provider(s) to:</p>
+            <ol>
+                <li>Complete the transaction for which we collected the personal information, provide a good or service that you requested, take actions reasonably anticipated within the context of our ongoing business relationship with you, or otherwise perform our contract with you.</li>
+                <li>Detect security incidents, protect against malicious, deceptive, fraudulent, or illegal activity, or prosecute those responsible for such activities.</li>
+                <li>Debug products to identify and repair errors that impair existing intended functionality.</li>
+                <li>Exercise free speech, ensure the right of another consumer to exercise their free speech rights, or exercise another right provided for by law.</li>
+                <li>Comply with the California Electronic Communications Privacy Act (Cal. Penal Code § 1546 et. seq.).</li>
+                <li>Engage in public or peer-reviewed scientific, historical, or statistical research in the public interest that adheres to all other applicable ethics and privacy laws, when the information's deletion may seriously impair or render impossible the research's achievement, if you previously provided informed consent.</li>
+                <li>Enable solely internal uses that are reasonably aligned with consumer expectations based on your relationship with us.</li>
+                <li>Comply with a legal obligation.</li>
+                <li>Make other internal and lawful uses of that information that are compatible with the context in which you provided it.</li>
+            </ol>
+            <h3>13.3. Right to Opt-Out of Sale/Sharing:</h3>
+            <p>California residents have the right to opt-out of the "sale" or "sharing" of their personal information. ChatoriCode does not "sell" personal information in the traditional sense (i.e., exchanging it for monetary value). However, under California law, sharing certain data with third parties for cross-context behavioral advertising may be considered "sharing." We do not currently engage in such "sharing" of your personal information. If our practices change, we will update this Privacy Policy and provide a clear mechanism for you to opt-out.</p>
+            <h3>13.4. Right to Correct Inaccurate Personal Information:</h3>
+            <p>You have the right to request the correction of inaccurate personal information we maintain about you.</p>
+            <h3>13.5. Right to Limit Use and Disclosure of Sensitive Personal Information:</h3>
+            <p>You have the right to limit the use and disclosure of your sensitive personal information (SPI) to that which is necessary to perform the services or provide the goods reasonably expected by an average consumer who requests those goods or services. ChatoriCode does not typically collect sensitive personal information from its users.</p>
+            <h3>13.6. Non-Discrimination:</h3>
+            <p>We will not discriminate against you for exercising any of your CCPA/CPRA rights. Unless permitted by the CCPA/CPRA, we will not:</p>
+            <ul>
+                <li>Deny you goods or services.</li>
+                <li>Charge you different prices or rates for goods or services, including through granting discounts or other benefits, or imposing penalties.</li>
+                <li>Provide you a different level or quality of goods or services.</li>
+                <li>Suggest that you may receive a different price or rate for goods or services or a different level or quality of goods or services.</li>
+            </ul>
+            <h3>13.7. Exercising Your CCPA/CPRA Rights:</h3>
+            <p>To exercise the rights described above, please submit a verifiable consumer request to us by contacting us via the methods provided in the "Contact Information" section below. Only you, or a person registered with the California Secretary of State that you authorize to act on your behalf, may make a verifiable consumer request related to your personal information. You may also make a verifiable consumer request on behalf of your minor child. The verifiable consumer request must: (i) Provide sufficient information that allows us to reasonably verify you are the person about whom we collected personal information or an authorized representative; and (ii) Describe your request with sufficient detail that allows us to properly understand, evaluate, and respond to it. We cannot respond to your request or provide you with personal information if we cannot verify your identity or authority to make the request and confirm the personal information relates to you. Making a verifiable consumer request does not require you to create an account with us. We will only use personal information provided in a verifiable consumer request to verify the requestor's identity or authority to make the request.</p>
+
+            <h2>14. Your European Union (EU) and UK Privacy Rights (GDPR)</h2>
+            <p>If you are a resident of the European Union (EU) or the United Kingdom (UK), the General Data Protection Regulation (GDPR) provides you with specific rights regarding your personal data. This section outlines your GDPR rights and how to exercise them.</p>
+            <h3>14.1. Lawful Basis for Processing:</h3>
+            <p>We will only process your personal data where we have a lawful basis for doing so. The lawful bases we rely on include:</p>
+            <ul>
+                <li><strong>Consent:</strong> Where you have given us explicit consent to process your personal data for one or more specific purposes (e.g., for marketing communications).</li>
+                <li><strong>Contractual Necessity:</strong> Where the processing is necessary for the performance of a contract to which you are a party or in order to take steps at your request prior to entering into a contract (e.g., to provide you with access to our services).</li>
+                <li><strong>Legal Obligation:</strong> Where processing is necessary for compliance with a legal obligation to which we are subject (e.g., tax laws).</li>
+                <li><strong>Legitimate Interests:</strong> Where processing is necessary for the purposes of the legitimate interests pursued by us or by a third party, except where such interests are overridden by your interests or fundamental rights and freedoms which require protection of personal data. Our legitimate interests include improving our services, marketing, fraud prevention, and ensuring the security of our Website.</li>
+            </ul>
+            <h3>14.2. Your GDPR Rights:</h3>
+            <ul>
+                <li><strong>Right to be Informed:</strong> You have the right to be informed about the collection and use of your personal data. This Privacy Policy serves to fulfill this right.</li>
+                <li><strong>Right of Access (Article 15 GDPR):</strong> You have the right to obtain confirmation as to whether or not personal data concerning you are being processed, and, where that is the case, access to the personal data and certain information about the processing.</li>
+                <li><strong>Right to Rectification (Article 16 GDPR):</strong> You have the right to obtain from us without undue delay the rectification of inaccurate personal data concerning you. You also have the right to have incomplete personal data completed, including by means of providing a supplementary statement.</li>
+                <li><strong>Right to Erasure ('Right to be Forgotten') (Article 17 GDPR):</strong> You have the right to obtain the erasure of personal data concerning you without undue delay where one of the following grounds applies:
+                    <ul>
+                        <li>The personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed.</li>
+                        <li>You withdraw consent on which the processing is based and where there is no other legal ground for the processing.</li>
+                        <li>You object to the processing and there are no overriding legitimate grounds for the processing.</li>
+                        <li>The personal data have been unlawfully processed.</li>
+                        <li>The personal data have to be erased for compliance with a legal obligation in Union or Member State law to which we are subject.</li>
+                    </ul>
+                </li>
+                <li><strong>Right to Restriction of Processing (Article 18 GDPR):</strong> You have the right to obtain from us restriction of processing where one of the following applies:
+                    <ul>
+                        <li>The accuracy of the personal data is contested by you, for a period enabling us to verify the accuracy of the personal data.</li>
+                        <li>The processing is unlawful and you oppose the erasure of the personal data and request the restriction of their use instead.</li>
+                        <li>We no longer need the personal data for the purposes of the processing, but they are required by you for the establishment, exercise, or defense of legal claims.</li>
+                        <li>You have objected to processing pursuant to Article 21(1) pending the verification whether the legitimate grounds of the controller override those of the data subject.</li>
+                    </ul>
+                </li>
+                <li><strong>Right to Data Portability (Article 20 GDPR):</strong> You have the right to receive the personal data concerning you, which you have provided to us, in a structured, commonly used and machine-readable format and have the right to transmit those data to another controller without hindrance from us, where the processing is based on consent or on a contract and the processing is carried out by automated means.</li>
+                <li><strong>Right to Object (Article 21 GDPR):</strong> You have the right to object, on grounds relating to your particular situation, at any time to processing of personal data concerning you which is based on legitimate interests, including profiling. You also have the right to object to the processing of personal data for direct marketing purposes.</li>
+                <li><strong>Rights in Relation to Automated Decision Making and Profiling (Article 22 GDPR):</strong> You have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning you or similarly significantly affects you. We do not currently engage in such automated decision-making.</li>
+                <li><strong>Right to Lodge a Complaint with a Supervisory Authority:</strong> Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence, place of work or place of the alleged infringement if you consider that the processing of personal data relating to you infringes the GDPR.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the contact details provided at the end of this Privacy Policy. We will respond to your request within one month of receipt, which may be extended by two further months where necessary, taking into account the complexity and number of the requests.</p>
+
+            <h2>15. Contact Information</h2>
+            <p>To ask questions or comment about this Privacy Policy and our privacy practices, contact us at:</p>
+            <p><strong>Email:</strong> privacy@chatoricode.com</p>
+            <p><strong>Postal Address:</strong><br>
+            ChatoriCode Privacy Team<br>
+            123 Flavor Street<br>
+            Snack City, Delhi, India - 110001</p>
+            <p>We are committed to resolving any complaints about our collection or use of your personal information. If you feel that we have not adhered to this Privacy Policy, please contact us promptly. We will do our best to address your concerns and resolve any issues. We value your trust and are dedicated to protecting your privacy.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>&copy; 2025 ChatoriCode. All rights reserved. | "Decode the Crave."</p>
+                <p class="customer-satisfaction">Your satisfaction is our priority. We are committed to bringing you the best and most delicious fast food and street snack recipes to make at home. We continuously strive to improve our content and user experience, and your feedback is always welcome!</p>
+                <p><strong>Address:</strong> ChatoriCode HQ, 123 Flavor Street, Snack City, Delhi, India - 110001</p>
+            </div>
+            <div class="disclaimer-text">
+                <h3>Disclaimer</h3>
+                <p>The information provided on ChatoriCode website (the "Website") is for general informational and entertainment purposes only. All recipes, tips, and culinary advice published herein are developed and shared in good faith. However, ChatoriCode makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the Website or the information, products, services, or related graphics contained on the Website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+                <p>ChatoriCode is not responsible for any adverse reactions, allergies, or other issues that may arise from following the recipes or advice presented on this Website. It is the user's responsibility to verify ingredients, cooking methods, and ensure they are suitable for their dietary needs and health conditions. Always exercise caution and consult with a healthcare professional or allergist if you have concerns about specific ingredients. Nutritional information, if provided, is an estimate and can vary significantly based on ingredients used, preparation methods, and serving sizes. We recommend users consult a registered dietitian or nutritionist for precise dietary advice.</p>
+                <p>While we strive to provide safe and easy-to-follow instructions, cooking inherently involves risks such as cuts, burns, or other injuries. Always use appropriate kitchen safety measures, handle sharp objects with care, and use heat-resistant tools when cooking. Children should always be supervised by an adult when participating in cooking activities. The content on this Website may include links to other websites which are not under the control of ChatoriCode. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. Every effort is made to keep the Website up and running smoothly. However, ChatoriCode takes no responsibility for, and will not be liable for, the Website being temporarily unavailable due to technical issues beyond our control. The recipes and methods presented are our interpretations and adaptations for home cooking and may not exactly replicate commercial or restaurant preparations.</p>
+                <p>By using this Website, you hereby agree to these terms and conditions. If you do not agree with any part of this disclaimer, please do not use our Website. We reserve the right to amend this disclaimer at any time without prior notice. Your continued use of the Website after any such changes constitutes your acceptance of the new disclaimer. We encourage you to review this page periodically for any updates.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

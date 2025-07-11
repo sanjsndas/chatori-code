@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us & FAQ – ChatoriCode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #E53935;
+            --accent-yellow: #FFCA28;
+            --charcoal: #333333;
+            --light-gray: #f8f8f8;
+            --text-color: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-gray);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--charcoal);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.8em; }
+        h3 { font-size: 2.2em; }
+        h4 { font-size: 1.8em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 25px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        /* --- Main Content - Contact & FAQ --- */
+        .contact-hero {
+            background-color: var(--accent-yellow);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-red);
+            margin-bottom: 40px;
+        }
+
+        .contact-hero h1 {
+            color: var(--primary-red);
+            font-size: 4em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .contact-hero p {
+            font-size: 1.3em;
+            color: var(--charcoal);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 3em;
+            color: var(--primary-red);
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .contact-form-section form {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--charcoal);
+        }
+
+        .contact-form-section input[type="text"],
+        .contact-form-section input[type="email"],
+        .contact-form-section textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: 'Quicksand', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form-section input[type="text"]:focus,
+        .contact-form-section input[type="email"]:focus,
+        .contact-form-section textarea:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2);
+            outline: none;
+        }
+
+        .contact-form-section textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form-section button {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            align-self: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .contact-form-section button:hover {
+            background-color: darken(var(--primary-red), 10%);
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--light-gray);
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h3 {
+            color: var(--charcoal);
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            cursor: pointer; /* Indicate it's clickable for potential accordion */
+        }
+
+        .faq-item p {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 40px 0 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .footer-info {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .disclaimer-text {
+            font-size: 0.8em;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            text-align: left;
+        }
+        
+        .customer-satisfaction {
+            margin-top: 20px;
+            color: var(--accent-yellow);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header nav ul li {
+                margin: 5px 15px;
+            }
+
+            .contact-hero h1 {
+                font-size: 3em;
+            }
+
+            .contact-hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2.5em;
+            }
+
+            .contact-form-section, .faq-section {
+                padding: 30px;
+            }
+
+            .contact-form-section form {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.7em; }
+            .contact-hero h1 {
+                font-size: 2.5em;
+            }
+            .faq-item h3 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ChatoriCode</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get in Touch & FAQs</h1>
+                <p>Have a question, a recipe idea, or just want to say hi? We'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section container">
+            <h2 class="section-title">Send Us a Message</h2>
+            <form action="#" method="POST"> <!-- Action should point to your server-side script or form service -->
+                <div>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What's your message about?">
+                </div>
+                <div>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="8" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+                <p class="form-note">Please note: This is a static HTML form. For actual submission, backend integration is required.</p>
+            </form>
+        </section>
+
+        <section class="faq-section container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Q: Are the recipes on ChatoriCode easy to make for beginners?</h3>
+                <p>A: Absolutely! ChatoriCode is designed with home cooks and beginners in mind. Many of our recipes are labeled "5-Min Quickies" or "Fast Fixes" and come with step-by-step instructions, often accompanied by visual guides (where available). We focus on simple techniques and readily available ingredients to ensure anyone can decode the crave at home. Our goal is to make street-style and fast food accessible and fun for everyone, regardless of their cooking experience. We break down complex dishes into manageable steps, providing tips and tricks to ensure success in your kitchen. If you ever get stuck, feel free to reach out via our contact form!</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: Can I submit my own recipes to ChatoriCode?</h3>
+                <p>A: We love featuring the culinary creativity of our community! Currently, we are developing a dedicated recipe submission portal. In the meantime, if you have a unique fast food, fusion snack, or street-style recipe that aligns with the ChatoriCode vibe, please send us a brief description and any accompanying photos or videos via our contact form. Our editorial team will review your submission, and if it's a good fit, we'll reach out to discuss featuring it on our platform. We're always on the lookout for bold flavors and innovative hacks from our Chatori community!</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: How often is new content (recipes, blog posts) added to the website?</h3>
+                <p>A: We're constantly cooking up new content! We aim to add new recipes weekly, with a special "Code of the Crave" feature every week decoding a popular snack. Our blog is updated regularly with new articles on snack hacks, food trends, and culinary stories. We also produce "1-Min Chatori Fix" video shorts frequently for our social media channels, which are then linked on the website. To stay updated, we highly recommend subscribing to our newsletter and following us on our social media platforms!</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: Do you offer healthier alternatives for fast food?</h3>
+                <p>A: Yes! We have a dedicated "Junk Made Healthy" category where we explore delicious ways to enjoy your favorite fast food and street snacks with a healthier twist. This includes recipes with baked or air-fried options instead of deep-fried, recipes using whole grains, and those incorporating more vegetables and leaner proteins. While our core focus is on flavor and speed, we believe in mindful indulgence and providing options for those looking to enjoy these treats with less guilt. We provide tips on ingredient substitutions and cooking methods to make your favorite dishes lighter without compromising on taste.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: What is the "Snack-Crate Builder" feature?</h3>
+                <p>A: The "Snack-Crate Builder" is an upcoming bonus content feature designed to help you make the most of your pantry! You'll be able to input ingredients you currently have on hand, and our system will automatically suggest multiple delicious ChatoriCode recipes you can create with those ingredients. It's our way of helping you reduce food waste, spark culinary creativity, and ensure you always have a fast flavor hack ready. Stay tuned for its launch – we're very excited about this one!</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: How can I provide feedback or report an issue with the website?</h3>
+                <p>A: Your feedback is incredibly valuable to us! The best way to provide feedback or report any technical issues you encounter on the website is by using the contact form above. Please select "Website Feedback" or "Technical Issue" as your subject, and provide as much detail as possible so our team can assist you effectively. We are committed to continuously improving your experience on ChatoriCode.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: Are the recipes suitable for specific dietary restrictions (e.g., vegetarian, vegan, gluten-free)?</h3>
+                <p>A: While many of our recipes are naturally vegetarian due to the nature of Indian street food, we are actively working on adding specific tags and filters to help users easily find recipes that fit their dietary needs (e.g., "Vegan," "Gluten-Free options"). Currently, we recommend reviewing the ingredient list of each recipe carefully. We also provide tips for substitutions in many recipes to help you adapt them to your preferences. Our goal is to make ChatoriCode inclusive for all food lovers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: Can I use ChatoriCode recipes for commercial purposes?</h3>
+                <p>A: Our recipes and content are primarily intended for personal, non-commercial home use. If you are interested in using our recipes or content for commercial purposes (e.g., in a restaurant, catering business, or published work), please contact us directly through the form above with details of your proposed use. We will review your request and discuss potential licensing or collaboration opportunities. Unauthorized commercial use of our content is prohibited under our Terms of Service.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>&copy; 2025 ChatoriCode. All rights reserved. | "Decode the Crave."</p>
+                <p class="customer-satisfaction">Your satisfaction is our priority. We are committed to bringing you the best and most delicious fast food and street snack recipes to make at home. We continuously strive to improve our content and user experience, and your feedback is always welcome!</p>
+                <p><strong>Address:</strong> ChatoriCode HQ, 123 Flavor Street, Snack City, Delhi, India - 110001</p>
+            </div>
+            <div class="disclaimer-text">
+                <h3>Disclaimer</h3>
+                <p>The information provided on ChatoriCode website (the "Website") is for general informational and entertainment purposes only. All recipes, tips, and culinary advice published herein are developed and shared in good faith. However, ChatoriCode makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the Website or the information, products, services, or related graphics contained on the Website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+                <p>ChatoriCode is not responsible for any adverse reactions, allergies, or other issues that may arise from following the recipes or advice presented on this Website. It is the user's responsibility to verify ingredients, cooking methods, and ensure they are suitable for their dietary needs and health conditions. Always exercise caution and consult with a healthcare professional or allergist if you have concerns about specific ingredients. Nutritional information, if provided, is an estimate and can vary significantly based on ingredients used, preparation methods, and serving sizes. We recommend users consult a registered dietitian or nutritionist for precise dietary advice.</p>
+                <p>While we strive to provide safe and easy-to-follow instructions, cooking inherently involves risks such as cuts, burns, or other injuries. Always use appropriate kitchen safety measures, handle sharp objects with care, and use heat-resistant tools when cooking. Children should always be supervised by an adult when participating in cooking activities. The content on this Website may include links to other websites which are not under the control of ChatoriCode. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. Every effort is made to keep the Website up and running smoothly. However, ChatoriCode takes no responsibility for, and will not be liable for, the Website being temporarily unavailable due to technical issues beyond our control. The recipes and methods presented are our interpretations and adaptations for home cooking and may not exactly replicate commercial or restaurant preparations.</p>
+                <p>By using this Website, you hereby agree to these terms and conditions. If you do not agree with any part of this disclaimer, please do not use our Website. We reserve the right to amend this disclaimer at any time without prior notice. Your continued use of the Website after any such changes constitutes your acceptance of the new disclaimer. We encourage you to review this page periodically for any updates.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

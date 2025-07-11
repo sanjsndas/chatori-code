@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy – ChatoriCode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #E53935;
+            --accent-yellow: #FFCA28;
+            --charcoal: #333333;
+            --light-gray: #f8f8f8;
+            --text-color: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.8; /* Slightly more space for readability in long text */
+            color: var(--text-color);
+            background-color: var(--light-gray);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--charcoal);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.8em; }
+        h3 { font-size: 2.2em; }
+        h4 { font-size: 1.8em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 25px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        /* --- Main Content - Cookie Policy --- */
+        .cookie-hero {
+            background-color: var(--accent-yellow);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-red);
+            margin-bottom: 40px;
+        }
+
+        .cookie-hero h1 {
+            color: var(--primary-red);
+            font-size: 4em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .cookie-hero p {
+            font-size: 1.3em;
+            color: var(--charcoal);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cookie-content {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .cookie-content h2 {
+            color: var(--primary-red);
+            font-size: 2.5em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-yellow);
+            padding-bottom: 10px;
+        }
+
+        .cookie-content h3 {
+            color: var(--charcoal);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .cookie-content h4 {
+            color: var(--primary-red);
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .cookie-content p {
+            margin-bottom: 1.5em;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .cookie-content ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+        }
+
+        .cookie-content ol {
+            list-style: decimal;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+        }
+
+        .cookie-content li {
+            margin-bottom: 0.8em;
+            font-size: 1.05em;
+        }
+
+        .cookie-content a {
+            color: var(--primary-red);
+            text-decoration: underline;
+        }
+
+        .cookie-content a:hover {
+            color: var(--charcoal);
+        }
+
+        /* Cookie Consent Dialogue Box */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--charcoal);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+            z-index: 2000;
+            transform: translateY(100%); /* Start hidden */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .cookie-consent-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-consent-banner p {
+            margin: 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .cookie-consent-banner .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cookie-consent-banner button {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cookie-consent-banner button:hover {
+            background-color: darken(var(--primary-red), 10%);
+            transform: translateY(-2px);
+        }
+
+        .cookie-consent-banner button.decline {
+            background-color: #555;
+        }
+
+        .cookie-consent-banner button.decline:hover {
+            background-color: #333;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 40px 0 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .footer-info {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .disclaimer-text {
+            font-size: 0.8em;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            text-align: left;
+        }
+        
+        .customer-satisfaction {
+            margin-top: 20px;
+            color: var(--accent-yellow);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header nav ul li {
+                margin: 5px 15px;
+            }
+
+            .cookie-hero h1 {
+                font-size: 3em;
+            }
+
+            .cookie-hero p {
+                font-size: 1.1em;
+            }
+
+            .cookie-content {
+                padding: 30px;
+            }
+
+            .cookie-content h2 {
+                font-size: 2em;
+            }
+
+            .cookie-content h3 {
+                font-size: 1.5em;
+            }
+
+            .cookie-consent-banner {
+                padding: 15px;
+            }
+
+            .cookie-consent-banner p {
+                font-size: 0.95em;
+            }
+
+            .cookie-consent-banner .buttons {
+                flex-direction: column;
+                width: 80%;
+            }
+
+            .cookie-consent-banner button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.7em; }
+            .cookie-hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ChatoriCode</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cookie-hero">
+            <div class="container">
+                <h1>Cookie Policy</h1>
+                <p>Understanding how ChatoriCode uses cookies and other tracking technologies to enhance your experience.</p>
+            </div>
+        </section>
+
+        <section class="cookie-content container">
+            <p><strong>Last Updated: July 10, 2025</strong></p>
+
+            <h2>1. What are Cookies?</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the owners of the site. Cookies serve various functions, such as remembering your login details, storing your preferences, and helping us analyze how our website is used. They can be "session cookies" which are temporary and deleted when you close your browser, or "persistent cookies" which remain on your device for a set period or until you delete them. The information stored in cookies can be read by the website that placed them, allowing the site to recognize your browser and remember your past actions or preferences. This makes your subsequent visits more convenient and personalized. Cookies are an integral part of modern web browsing, enabling many of the features we take for granted, from keeping items in a shopping cart to delivering personalized content. They are generally harmless and do not contain viruses or malware. However, understanding their purpose and how to manage them is crucial for maintaining your online privacy.</p>
+
+            <h2>2. How ChatoriCode Uses Cookies</h2>
+            <p>At ChatoriCode, we use cookies for a variety of purposes to enhance your browsing experience, personalize content, analyze site performance, and deliver relevant advertisements. Our use of cookies is designed to make your time on our Website more enjoyable and efficient, while also helping us understand how we can improve our services. We categorize our cookies to help you understand their function and your choices. Below, we detail the specific ways cookies contribute to your ChatoriCode experience, ensuring transparency in our data practices. We are committed to using cookies responsibly and in accordance with applicable data protection regulations. Each cookie serves a specific role, contributing to the overall functionality and user-friendliness of our platform. We continuously review our cookie usage to ensure it aligns with best practices and respects your privacy preferences. Our aim is to provide a seamless and tailored experience, from remembering your preferred recipes to analyzing site traffic patterns for continuous improvement.</p>
+
+            <h3>3. Types of Cookies Used on ChatoriCode and Their Purpose (40 Detailed Points)</h3>
+
+            <h4>3.1. Strictly Necessary Cookies (Essential Cookies)</h4>
+            <p>These cookies are fundamental for the operation of our Website and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p>
+            <ol>
+                <li>
+                    <strong>Session Management:</strong>
+                    <p>These cookies are crucial for maintaining your session as you navigate through different pages of the Website. Without them, the Website would treat you as a new visitor on every page, making it impossible to stay logged in or remember your selections as you browse. They ensure continuity of your experience, allowing you to move seamlessly from one section to another without re-authenticating. This is vital for any interactive features, like saving recipes to a "Chatori Box" or interacting with a search filter.</p>
+                </li>
+                <li>
+                    <strong>User Authentication:</strong>
+                    <p>When you log into your ChatoriCode account, authentication cookies are set to verify your identity and keep you logged in. This prevents you from having to enter your credentials every time you visit a new page or return to the site within a certain period. These cookies are encrypted to protect your login information and are essential for accessing personalized features and content on your profile.</p>
+                </li>
+                <li>
+                    <strong>Security Measures:</strong>
+                    <p>Certain cookies are used to implement security features, such as detecting repeated failed login attempts or identifying unusual activity that could indicate a security threat. They help protect your account from unauthorized access and ensure the overall security of our Website's infrastructure. These cookies are critical for maintaining the integrity and safety of our platform and user data.</p>
+                </li>
+                <li>
+                    <strong>Load Balancing:</strong>
+                    <p>These cookies distribute network traffic across multiple servers to optimize website performance and ensure stability. If ChatoriCode experiences high traffic, load balancing cookies ensure that your requests are routed to the most available server, preventing slowdowns and ensuring a consistent user experience. They are transparent to the user but vital for site reliability.</p>
+                </li>
+                <li>
+                    <strong>Cookie Consent Preferences:</strong>
+                    <p>When you make a choice regarding cookie acceptance (e.g., accepting all, declining, or customizing preferences), a cookie is set to remember your decision. This prevents the cookie consent banner from reappearing on every visit and ensures your preferences are respected across sessions. This cookie is essential for compliance with privacy regulations.</p>
+                </li>
+                <li>
+                    <strong>Form Submission Retention:</strong>
+                    <p>If you fill out a form on our Website (e.g., contact form, recipe submission), some cookies might temporarily store your input to prevent data loss if you navigate away or refresh the page before submitting. This enhances user convenience and prevents frustration from lost information during interactive processes.</p>
+                </li>
+                <li>
+                    <strong>Basic Website Functionality:</strong>
+                    <p>These cookies enable core functionalities like remembering your language preference (if applicable) or the region you're browsing from, which might affect content display. They ensure the Website functions as expected and provides a consistent experience based on your basic settings.</p>
+                </li>
+                <li>
+                    <strong>Accessibility Features:</strong>
+                    <p>For users who utilize accessibility features (e.g., high contrast mode, font size adjustments), specific cookies might be used to remember these settings. This ensures that your chosen accessibility preferences are maintained across visits, providing a more inclusive browsing experience.</p>
+                </li>
+                <li>
+                    <strong>Preventing Cross-Site Request Forgery (CSRF):</strong>
+                    <p>CSRF tokens, often stored in cookies, are used to protect against malicious attacks where an attacker tricks a user into performing actions they didn't intend. These cookies add an extra layer of security to form submissions and other interactive elements on the Website.</p>
+                </li>
+                <li>
+                    <strong>Server-Side Session IDs:</strong>
+                    <p>While not directly accessible by your browser, a server-side session ID often has a corresponding cookie on your device. This ID helps the server track your unique session, linking your requests to your specific activity without storing extensive personal data directly in the cookie itself. It's a foundational element for dynamic web applications.</p>
+                </li>
+            </ol>
+
+            <h4>3.2. Analytical / Performance Cookies</h4>
+            <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its performance.</p>
+            <ol start="11">
+                <li>
+                    <strong>Website Traffic Analysis:</strong>
+                    <p>These cookies collect data on the number of visitors to our Website, the pages they visit, and the path they take through the site. This helps us understand overall site popularity and identify areas that might need improvement in navigation or content. The data is aggregated and anonymized.</p>
+                </li>
+                <li>
+                    <strong>User Journey Tracking:</strong>
+                    <p>By tracking the sequence of pages a user visits, we can understand typical user journeys. This insight helps us optimize content flow, identify bottlenecks, and ensure that users can easily find recipes or information they are looking for. This data is also anonymized to protect individual privacy.</p>
+                </li>
+                <li>
+                    <strong>Content Popularity Measurement:</strong>
+                    <p>These cookies help us identify which recipes, blog posts, or categories are most popular among our users. This information is invaluable for our content strategy, allowing us to create more of what our audience loves and to better organize our Website. It informs our editorial decisions.</p>
+                </li>
+                <li>
+                    <strong>Bounce Rate Analysis:</strong>
+                    <p>A bounce rate indicates the percentage of visitors who leave the site after viewing only one page. Performance cookies help us measure this, allowing us to identify pages that might not be engaging enough or where users aren't finding what they expect, prompting us to make improvements.</p>
+                </li>
+                <li>
+                    <strong>Device and Browser Compatibility:</strong>
+                    <p>These cookies collect anonymized data about the types of devices (desktop, mobile, tablet) and browsers users are employing to access ChatoriCode. This helps us ensure our Website is optimized for various platforms and identify any compatibility issues that need addressing for a seamless experience across all devices.</p>
+                </li>
+                <li>
+                    <strong>Referral Source Tracking:</strong>
+                    <p>We use these cookies to understand how users arrive at our Website – whether from a search engine, a social media link, another website, or directly. This data helps us evaluate the effectiveness of our marketing efforts and partnerships, allowing us to allocate resources efficiently.</p>
+                </li>
+                <li>
+                    <strong>Time Spent on Pages:</strong>
+                    <p>Measuring how long users spend on individual pages provides insight into content engagement. Longer durations often indicate that content is valuable and engaging, while short durations might suggest a need for improvement. This helps us refine recipe instructions and blog articles.</p>
+                </li>
+                <li>
+                    <strong>Error Tracking and Debugging:</strong>
+                    <p>In some cases, performance cookies can help us identify and diagnose errors or technical issues on the Website. By tracking where users encounter problems, we can quickly address bugs and improve site stability, ensuring a smoother experience for everyone.</p>
+                </li>
+                <li>
+                    <strong>A/B Testing:</strong>
+                    <p>When we test new features or layouts, performance cookies help us measure the impact of different versions on user behavior. This allows us to make data-driven decisions about which designs or functionalities are most effective before rolling them out to all users.</p>
+                </li>
+                <li>
+                    <strong>Geographic Performance Analysis:</strong>
+                    <p>While not precise location data, these cookies can provide aggregated insights into the general geographic regions from which our users access the Website. This helps us understand our audience distribution and tailor content or services to regional preferences, such as popular local snacks.</p>
+                </li>
+            </ol>
+
+            <h4>3.3. Functionality Cookies</h4>
+            <p>These cookies enable the Website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages. If you do not allow these cookies, then some or all of these services may not function properly.</p>
+            <ol start="21">
+                <li>
+                    <strong>Remembering User Preferences:</strong>
+                    <p>Functionality cookies store your preferences, such as your preferred language, region, or display settings. This means you don't have to re-select these options every time you visit, providing a more convenient and personalized browsing experience. They enhance the usability of the site.</p>
+                </li>
+                <li>
+                    <strong>Personalized Content Display:</strong>
+                    <p>Based on your past interactions or preferences, these cookies allow us to display content that is more relevant to you. For example, if you frequently view vegetarian recipes, the site might highlight new vegetarian additions on the homepage, tailoring your content feed.</p>
+                </li>
+                <li>
+                    <strong>Recipe Saving Functionality:</strong>
+                    <p>If ChatoriCode offers a "Save to My Chatori Box" feature, functionality cookies help remember which recipes you've saved, even if you're not logged in. This ensures that your personalized collection remains accessible across sessions, enhancing your interaction with our recipe library.</p>
+                </li>
+                <li>
+                    <strong>Remembering Search Filters:</strong>
+                    <p>When you apply filters to recipe searches (e.g., "5-Min Quickies," "Spicy"), these cookies can remember your last-used filters. This saves you time on subsequent searches, allowing you to quickly refine your results without re-entering criteria, streamlining your recipe discovery.</p>
+                </li>
+                <li>
+                    <strong>Video Playback Preferences:</strong>
+                    <p>If our site hosts videos (e.g., "1-Min Chatori Fix" shorts), functionality cookies might remember your volume settings, playback speed, or whether you've watched a video before, ensuring a consistent and tailored media consumption experience.</p>
+                </li>
+                <li>
+                    <strong>User-Specific Recommendations:</strong>
+                    <p>Beyond general content popularity, these cookies enable more nuanced recommendations based on your individual browsing history. If you've viewed several momo recipes, the system might suggest related articles or fusion momo variations, deepening your engagement with specific culinary themes.</p>
+                </li>
+                <li>
+                    <strong>Chat Support Integration:</strong>
+                    <p>If we integrate a live chat support widget, functionality cookies can remember your chat history or user ID within the chat session. This allows for seamless continuation of conversations if you navigate away and return, improving customer service efficiency and continuity.</p>
+                </li>
+                <li>
+                    <strong>Social Media Integration:</strong>
+                    <p>These cookies facilitate social media sharing buttons or embedded social media feeds. They allow you to easily share ChatoriCode content on your social platforms or view our social updates directly on our site, enhancing connectivity and content dissemination.</p>
+                </li>
+                <li>
+                    <strong>Commenting System Functionality:</strong>
+                    <p>If our blog or recipes have a commenting system, functionality cookies might remember your name and email address (if you've provided them) to pre-fill comment forms. This makes it quicker and easier for you to engage with our content and community.</p>
+                </li>
+                <li>
+                    <strong>User Interface Customization:</strong>
+                    <p>For any features that allow you to customize the Website's interface (e.g., light/dark mode, specific layout preferences), these cookies store your choices. This ensures that your personalized view of ChatoriCode persists across visits, enhancing your comfort and usability.</p>
+                </li>
+            </ol>
+
+            <h4>3.4. Targeting / Advertising Cookies</h4>
+            <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>
+            <ol start="31">
+                <li>
+                    <strong>Interest-Based Advertising:</strong>
+                    <p>These cookies collect information about your browsing habits and interests on ChatoriCode and other websites to build a profile of your preferences. This profile is then used by advertising networks to show you advertisements that are more relevant to your likely interests across different websites and platforms, making ads more personalized.</p>
+                </li>
+                <li>
+                    <strong>Ad Campaign Performance Measurement:</strong>
+                    <p>Advertising cookies help us and our partners measure the effectiveness of our advertising campaigns. They track how many times an ad is shown, how many users click on it, and whether those clicks lead to desired actions (e.g., visiting a recipe page, signing up for a newsletter). This allows us to optimize our ad spending.</p>
+                </li>
+                <li>
+                    <strong>Frequency Capping:</strong>
+                    <p>These cookies prevent you from seeing the same advertisement too many times. By tracking how often a specific ad has been displayed to your browser, they help ensure a less repetitive and more pleasant ad experience for users, while also optimizing ad delivery for advertisers.</p>
+                </li>
+                <li>
+                    <strong>Retargeting/Remarketing:</strong>
+                    <p>If you visit a specific recipe page or category on ChatoriCode, retargeting cookies might be used to show you ads related to that content on other websites you visit. For example, if you viewed "Masala Fries Tower," you might see ads for related snack ingredients or kitchen gadgets later.</p>
+                </li>
+                <li>
+                    <strong>Audience Segmentation:</strong>
+                    <p>Advertising cookies contribute to segmenting our audience into groups based on shared interests or behaviors (e.g., "spicy food lovers," "quick recipe seekers"). Advertisers can then target specific segments with highly relevant messages, improving the efficiency of their campaigns and the relevance of ads to users.</p>
+                </li>
+                <li>
+                    <strong>Cross-Device Tracking (Probabilistic):</strong>
+                    <p>While not identifying you personally, some advertising cookies and technologies attempt to infer that different devices (e.g., your phone and laptop) belong to the same user. This allows for more consistent ad delivery across your devices, even if you're not logged into the same account on each.</p>
+                </li>
+                <li>
+                    <strong>Affiliate Marketing Tracking:</strong>
+                    <p>If ChatoriCode participates in affiliate marketing programs (e.g., linking to cooking product retailers), these cookies track whether a user clicked on an affiliate link on our site and subsequently made a purchase on the partner's site. This allows us to earn commissions for referrals.</p>
+                </li>
+                <li>
+                    <strong>Social Media Advertising Integration:</strong>
+                    <p>Cookies from social media platforms (e.g., Facebook Pixel) are used to understand user behavior on our site and then deliver targeted ads to those users on the respective social media platforms. This helps us reach relevant audiences with our content and promotions on social channels.</p>
+                </li>
+                <li>
+                    <strong>Third-Party Data Enrichment:</strong>
+                    <p>Some advertising partners may combine data collected via cookies on our site with other data they have about you from various sources. This allows them to create a more comprehensive profile for ad targeting, leading to highly personalized (and sometimes surprising) advertisements.</p>
+                </li>
+                <li>
+                    <strong>Ad Personalization Opt-Out Mechanisms:</strong>
+                    <p>These cookies sometimes store your preferences if you've opted out of personalized advertising through industry-standard opt-out tools (e.g., DAA, NAI). This ensures that your choice to receive less targeted advertising is respected by participating ad networks across different websites.</p>
+                </li>
+            </ol>
+
+            <h4>3.5. Other Tracking Technologies</h4>
+            <p>Beyond traditional cookies, ChatoriCode may also use other similar technologies, such as web beacons (also known as clear GIFs or pixel tags) and local storage objects (LSOs) like Flash cookies. These technologies serve similar purposes to cookies but may store more data or function differently.</p>
+            <ol start="41">
+                <li>
+                    <strong>Web Beacons/Pixel Tags:</strong>
+                    <p>These are tiny graphics with a unique identifier, similar in function to cookies, and are used to track the online movements of web users. In contrast to cookies, which are stored on a user's computer hard drive, web beacons are embedded invisibly on web pages or in emails and are about the size of the period at the end of this sentence. They help us count users who have visited certain pages or opened emails and gather other related website statistics.</p>
+                </li>
+                <li>
+                    <strong>Local Storage Objects (LSOs) - Flash Cookies:</strong>
+                    <p>Flash cookies are data files that can be created on your computer by the sites you visit. They are often used in conjunction with Flash content (e.g., embedded videos or games) to store user preferences or game progress. Unlike regular cookies, Flash cookies can store much more data and are not typically managed through browser settings. You may need to manage them through Adobe Flash Player settings.</p>
+                </li>
+                <li>
+                    <strong>Local Storage (HTML5):</strong>
+                    <p>Modern web browsers offer "local storage" (also known as HTML5 local storage), which allows websites to store data directly in the browser. This storage is persistent, meaning the data remains even after the browser is closed, similar to persistent cookies, but with a larger storage capacity. We might use this for remembering UI preferences or temporary data for features.</p>
+                </li>
+                <li>
+                    <strong>Session Storage (HTML5):</strong>
+                    <p>Similar to local storage, "session storage" allows websites to store data in the browser, but this data is cleared when the browser session ends (i.e., when the browser tab or window is closed). This is useful for temporary data that needs to persist only for the duration of a single browsing session, such as form inputs or temporary user selections.</p>
+                </li>
+                <li>
+                    <strong>ETags (Entity Tags):</strong>
+                    <p>ETags are a mechanism used by web servers to determine if a component of a web page (like an image or a script) in a browser's cache matches the version on the server. While primarily for caching efficiency, they can sometimes be used as a form of tracking, as they can act as unique identifiers that persist across sessions, even if traditional cookies are cleared.</p>
+                </li>
+                <li>
+                    <strong>Browser Fingerprinting:</strong>
+                    <p>This is a more advanced tracking technique that collects information about your web browser and device (e.g., browser type, version, operating system, plugins, fonts, screen resolution). This unique combination of attributes can be used to create a "fingerprint" that identifies your device, even without traditional cookies. While we don't actively employ this for tracking, it's a known technology in the web landscape.</p>
+                </li>
+                <li>
+                    <strong>Device Identifiers:</strong>
+                    <p>When you access ChatoriCode via a mobile app (if applicable), we may collect unique device identifiers (e.g., advertising IDs like IDFA for iOS or Android Advertising ID). These are used for advertising, analytics, and personalization within the app environment, similar to how cookies function on websites.</p>
+                </li>
+                <li>
+                    <strong>IP Address Tracking:</strong>
+                    <p>Your IP address, while not a cookie, is automatically collected by web servers. It can indicate your general geographic location and is used for security, fraud prevention, and aggregated geographical analytics. While not a persistent identifier for tracking per se, it's fundamental to how internet communication works.</p>
+                </li>
+                <li>
+                    <strong>Referrer URLs:</strong>
+                    <p>The "referrer URL" is the address of the webpage that linked you to ChatoriCode. This information is passed by your browser and helps us understand where our traffic comes from. It's not stored in a cookie but is part of the standard HTTP request, offering insights into user acquisition paths.</p>
+                </li>
+                <li>
+                    <strong>Server Logs:</strong>
+                    <p>Our web servers automatically record information about your visit in log files. This includes your IP address, browser type, operating system, pages visited, time of visit, and referring URL. While not a cookie, this data is crucial for website maintenance, security, and performance analysis, providing a comprehensive record of site activity.</p>
+                </li>
+            </ol>
+
+            <h2>4. Third-Party Cookies</h2>
+            <p>In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Website, deliver advertisements on and through the Website, and so on. These third parties include, but are not limited to, advertising networks, social media platforms, and analytics providers. We do not have control over the cookies placed by these third parties. Their use of cookies is governed by their own privacy policies. We encourage you to review the privacy policies of these third parties to understand their data collection and usage practices.</p>
+
+            <h2>5. Your Choices Regarding Cookies</h2>
+            <p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by:</p>
+            <ul>
+                <li><strong>Using Our Cookie Consent Tool:</strong> When you first visit ChatoriCode, you will see a cookie consent banner. You can accept all cookies, decline non-essential cookies, or customize your preferences. Your choices will be saved for future visits.</li>
+                <li><strong>Browser Settings:</strong> Most web browsers allow some control of most cookies through the browser settings. You can typically set your browser to refuse all or some browser cookies, or to alert you when cookies are being sent. However, if you disable or refuse cookies, please note that some parts of this Website may then be inaccessible or not function properly.</li>
+                <li><strong>Opt-Out Links:</strong> For some third-party advertising networks, you can opt out of interest-based advertising through industry-standard opt-out pages, such as those provided by the Network Advertising Initiative (<a href="http://optout.networkadvertising.org/" target="_blank">NAI</a>) or the Digital Advertising Alliance (<a href="http://optout.aboutads.info/" target="_blank">DAA</a>).</li>
+            </ul>
+            <p>Please note that if you delete your cookies or use a different browser or device, you may need to renew your opt-out choices.</p>
+
+            <h3>How to Control Cookies in Different Browsers:</h3>
+            <ul>
+                <li><strong>Google Chrome:</strong>
+                    <p>Open Chrome, click the three dots menu, go to "Settings" > "Privacy and security" > "Site Settings" > "Cookies and site data." Here you can block third-party cookies, clear cookies on exit, or manage specific site settings. You can also use "Incognito mode" for private browsing.</p>
+                </li>
+                <li><strong>Mozilla Firefox:</strong>
+                    <p>Open Firefox, click the menu button, go to "Settings" > "Privacy & Security." Under "Enhanced Tracking Protection," you can choose "Standard," "Strict," or "Custom" to control trackers and cookies. You can also manage specific site permissions or clear data.</p>
+                </li>
+                <li><strong>Microsoft Edge:</strong>
+                    <p>Open Edge, click the three dots menu, go to "Settings" > "Privacy, search, and services." Under "Tracking prevention," you can choose your level of prevention. You can also clear browsing data, including cookies, or manage site permissions individually.</p>
+                </li>
+                <li><strong>Apple Safari:</strong>
+                    <p>On macOS, go to Safari > "Preferences" > "Privacy." You can check "Prevent cross-site tracking" and "Block all cookies." On iOS, go to "Settings" > "Safari" and adjust "Prevent Cross-Site Tracking" and "Block All Cookies."</p>
+                </li>
+            </ul>
+
+            <h2>6. Changes to Our Cookie Policy</h2>
+            <p>We may update our Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, and other factors. The date the Cookie Policy was last revised is identified at the top of the page. You are responsible for ensuring we have an up-to-date active and deliverable email address for you, and for periodically visiting our Website and this Cookie Policy to check for any changes. Your continued use of this Website after we make changes is deemed to be acceptance of those changes. We encourage you to review this Cookie Policy periodically to stay informed about how we are using cookies and protecting your privacy.</p>
+
+            <h2>7. Contact Information</h2>
+            <p>If you have any questions about this Cookie Policy, please contact us:</p>
+            <p><strong>Email:</strong> privacy@chatoricode.com</p>
+            <p><strong>Postal Address:</strong><br>
+            ChatoriCode Privacy Team<br>
+            123 Flavor Street<br>
+            Snack City, Delhi, India - 110001</p>
+        </section>
+    </main>
+
+    <div class="cookie-consent-banner" id="cookieConsentBanner">
+        <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All," you consent to our use of cookies. <a href="cookies.html" style="color: var(--accent-yellow); text-decoration: underline;">Learn more about our Cookie Policy.</a></p>
+        <div class="buttons">
+            <button id="acceptCookies">Accept All</button>
+            <button id="declineCookies" class="decline">Decline</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>&copy; 2025 ChatoriCode. All rights reserved. | "Decode the Crave."</p>
+                <p class="customer-satisfaction">Your satisfaction is our priority. We are committed to bringing you the best and most delicious fast food and street snack recipes to make at home. We continuously strive to improve our content and user experience, and your feedback is always welcome!</p>
+                <p><strong>Address:</strong> ChatoriCode HQ, 123 Flavor Street, Snack City, Delhi, India - 110001</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+            </div>
+            <div class="disclaimer-text">
+                <h3>Disclaimer</h3>
+                <p>The information provided on ChatoriCode website (the "Website") is for general informational and entertainment purposes only. All recipes, tips, and culinary advice published herein are developed and shared in good faith. However, ChatoriCode makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the Website or the information, products, services, or related graphics contained on the Website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+                <p>ChatoriCode is not responsible for any adverse reactions, allergies, or other issues that may arise from following the recipes or advice presented on this Website. It is the user's responsibility to verify ingredients, cooking methods, and ensure they are suitable for their dietary needs and health conditions. Always exercise caution and consult with a healthcare professional or allergist if you have concerns about specific ingredients. Nutritional information, if provided, is an estimate and can vary significantly based on ingredients used, preparation methods, and serving sizes. We recommend users consult a registered dietitian or nutritionist for precise dietary advice.</p>
+                <p>While we strive to provide safe and easy-to-follow instructions, cooking inherently involves risks such as cuts, burns, or other injuries. Always use appropriate kitchen safety measures, handle sharp objects with care, and use heat-resistant tools when cooking. Children should always be supervised by an adult when participating in cooking activities. The content on this Website may include links to other websites which are not under the control of ChatoriCode. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. Every effort is made to keep the Website up and running smoothly. However, ChatoriCode takes no responsibility for, and will not be liable for, the Website being temporarily unavailable due to technical issues beyond our control. The recipes and methods presented are our interpretations and adaptations for home cooking and may not exactly replicate commercial or restaurant preparations.</p>
+                <p>By using this Website, you hereby agree to these terms and conditions. If you do not agree with any part of this disclaimer, please do not use our Website. We reserve the right to amend this disclaimer at any time without prior notice. Your continued use of the Website after any such changes constitutes your acceptance of the new disclaimer. We encourage you to review this page periodically for any updates.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieConsentBanner');
+            const acceptButton = document.getElementById('acceptCookies');
+            const declineButton = document.getElementById('declineCookies');
+
+            // Check if cookie consent has already been given
+            const consentGiven = localStorage.getItem('chatoricode_cookie_consent');
+
+            if (!consentGiven) {
+                // Show the banner if no consent is found
+                setTimeout(() => { // Small delay for better animation
+                    cookieBanner.classList.add('show');
+                }, 500);
+            }
+
+            acceptButton.addEventListener('click', function() {
+                localStorage.setItem('chatoricode_cookie_consent', 'accepted');
+                cookieBanner.classList.remove('show');
+                // Here you would typically enable analytics, advertising cookies etc.
+                console.log('Cookies accepted.');
+            });
+
+            declineButton.addEventListener('click', function() {
+                localStorage.setItem('chatoricode_cookie_consent', 'declined');
+                cookieBanner.classList.remove('show');
+                // Here you would typically disable non-essential cookies
+                console.log('Cookies declined.');
+            });
+        });
+    </script>
+
+</body>
+</html>
